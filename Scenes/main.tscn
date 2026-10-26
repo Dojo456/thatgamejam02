@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bi81dxop40lp6"]
+
+[node name="Main" type="Node" unique_id=1538488192]
+
+[node name="UI" type="Node" parent="." unique_id=1034761783]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1320784529]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -248.0
+offset_right = 48.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="UI/VBoxContainer" unique_id=1307574303]
+layout_mode = 2
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="UI/VBoxContainer" unique_id=372471197]
+layout_mode = 2
+text = "Quit Game"
