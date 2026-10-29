@@ -1,0 +1,10 @@
+[gd_resource type="TileSet" format=3 uid="uid://deg22tkmfm2h3"]
+
+[ext_resource type="PackedScene" uid="uid://dh1pklu3f8v00" path="res://map/obstacle.tscn" id="1_smiky"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a0dt8"]
+scenes/1/scene = ExtResource("1_smiky")
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_a0dt8")

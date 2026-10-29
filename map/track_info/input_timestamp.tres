@@ -1,0 +1,6 @@
+[gd_resource type="Resource" format=3 uid="uid://b6svjde664mh7"]
+
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="1_grrg6"]
+
+[resource]
+script = ExtResource("1_grrg6")

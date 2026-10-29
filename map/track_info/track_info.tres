@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TrackInfo" format=3 uid="uid://dn0kthuccv0l0"]
+
+[ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="1_di4j6"]
+[ext_resource type="AudioStream" uid="uid://l0sf73joe2o3" path="res://resources/Shinigami Eyes.mp3" id="1_r2bsa"]
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="2_og582"]
+
+[resource]
+script = ExtResource("1_di4j6")
+file = ExtResource("1_r2bsa")

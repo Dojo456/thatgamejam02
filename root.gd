@@ -2,7 +2,7 @@
 
 extends Node2D
 
-@onready var map = $Map
+@onready var map = $MapHolder
 @onready var char = $Character
 
 var map_initial: Vector2
@@ -26,7 +26,8 @@ func reset():
 func _process(delta: float) -> void:
 	if not Engine.is_editor_hint():	
 		time += delta
+		
+		if Input.is_action_just_pressed("reset"):
+			reset()
+		
 	map.position.x = map_initial.x - (map_speed * time)
-
-	if Input.is_action_just_pressed("reset"):
-		reset()

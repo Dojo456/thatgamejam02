@@ -13,7 +13,6 @@ script = ExtResource("1_pjt0s")
 jump_height = Vector2(0, 64)
 jump_time = 0.1
 hang_time = 0.3
-auto_resets = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024342201]
 position = Vector2(0.5, 0.5)
