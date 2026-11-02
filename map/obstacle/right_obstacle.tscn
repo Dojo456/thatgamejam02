@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://clicop4hf78lo"]
+
+[ext_resource type="PackedScene" uid="uid://dh1pklu3f8v00" path="res://map/obstacle/obstacle.tscn" id="1_gj1m0"]
+
+[node name="RightObstacle" type="Node2D" unique_id=452143175]
+
+[node name="Obstacle" parent="." unique_id=364192773 instance=ExtResource("1_gj1m0")]
+
+[node name="Obstacle3" parent="." unique_id=1910546913 instance=ExtResource("1_gj1m0")]
+position = Vector2(0, 64)
+
+[node name="Obstacle2" parent="." unique_id=487840532 instance=ExtResource("1_gj1m0")]
+position = Vector2(0, 128)
+
+[node name="Obstacle4" parent="." unique_id=267991180 instance=ExtResource("1_gj1m0")]
+position = Vector2(0, 192)
+
+[node name="Obstacle5" parent="." unique_id=1330027442 instance=ExtResource("1_gj1m0")]
+position = Vector2(0, 256)
