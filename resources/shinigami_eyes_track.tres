@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="TrackInfo" format=3 uid="uid://b6fwyx5d36tnf"]
+
+[ext_resource type="AudioStream" uid="uid://l0sf73joe2o3" path="res://resources/Shinigami Eyes.mp3" id="1_wjcg6"]
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="2_elkpb"]
+[ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="3_ew2t5"]
+
+[sub_resource type="Resource" id="Resource_ew2t5"]
+script = ExtResource("2_elkpb")
+timestamp = 2.0
+
+[sub_resource type="Resource" id="Resource_5nrha"]
+script = ExtResource("2_elkpb")
+timestamp = 4.0
+
+[sub_resource type="Resource" id="Resource_eelit"]
+script = ExtResource("2_elkpb")
+timestamp = 6.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_fe601"]
+script = ExtResource("2_elkpb")
+timestamp = 9.2
+
+[sub_resource type="Resource" id="Resource_ujrxl"]
+script = ExtResource("2_elkpb")
+timestamp = 12.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_dvtw1"]
+script = ExtResource("2_elkpb")
+timestamp = 14.0
+
+[sub_resource type="Resource" id="Resource_8mkh2"]
+script = ExtResource("2_elkpb")
+timestamp = 16.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_roxva"]
+script = ExtResource("2_elkpb")
+timestamp = 19.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_g1bhy"]
+script = ExtResource("2_elkpb")
+timestamp = 23.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_wjcg6"]
+script = ExtResource("2_elkpb")
+timestamp = 25.0
+input = 1
+
+[sub_resource type="Resource" id="Resource_elkpb"]
+script = ExtResource("2_elkpb")
+timestamp = 27.99
+input = 1
+
+[resource]
+script = ExtResource("3_ew2t5")
+name = "Shinigami Eyes"
+file = ExtResource("1_wjcg6")
+inputs_list = Array[ExtResource("2_elkpb")]([SubResource("Resource_ew2t5"), SubResource("Resource_5nrha"), SubResource("Resource_eelit"), SubResource("Resource_fe601"), SubResource("Resource_ujrxl"), SubResource("Resource_dvtw1"), SubResource("Resource_8mkh2"), SubResource("Resource_roxva"), SubResource("Resource_g1bhy"), SubResource("Resource_wjcg6"), SubResource("Resource_elkpb")])
+metadata/_custom_type_script = "uid://b51ujcbx2nys3"

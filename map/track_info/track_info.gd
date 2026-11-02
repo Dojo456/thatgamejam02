@@ -34,7 +34,3 @@ func _replace_nulls(arr: Array[InputTimestamp]) -> Array[InputTimestamp]:
 	cleaned.sort_custom(sort_func)
 	
 	return cleaned
-
-func _init() -> void:
-	for input in inputs_list:
-		input.resize(2)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://qhyejxa1umtl"]
+
+[ext_resource type="Script" uid="uid://befbt01itoopu" path="res://map/map_editor.gd" id="1_ubnlc"]
+[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_kuel0"]
+[ext_resource type="PackedScene" uid="uid://3mjduyqvkc7o" path="res://map/obstacle/up_obstacle.tscn" id="3_5woao"]
+[ext_resource type="PackedScene" uid="uid://csbstweo6860b" path="res://map/obstacle/down_obstacle.tscn" id="4_rwqyo"]
+[ext_resource type="PackedScene" uid="uid://dundk5crxayct" path="res://map/obstacle/left_obstacle.tscn" id="5_rwqyo"]
+[ext_resource type="PackedScene" uid="uid://clicop4hf78lo" path="res://map/obstacle/right_obstacle.tscn" id="6_jd6p1"]
+
+[node name="MapEditor" type="Node2D" unique_id=1952026126]
+script = ExtResource("1_ubnlc")
+track_info = ExtResource("2_kuel0")
+obstacle_bindings = Dictionary[int, PackedScene]({
+0: ExtResource("3_5woao"),
+1: ExtResource("4_rwqyo"),
+2: ExtResource("5_rwqyo"),
+3: ExtResource("6_jd6p1")
+})
+
+[node name="Obstacles" type="Node2D" parent="." unique_id=217013043]
+
+[node name="EditorElements" type="Node2D" parent="." unique_id=649489225]
+
+[node name="TrackTimeline" type="Line2D" parent="EditorElements" unique_id=998109580]
+points = PackedVector2Array(0, 384, 10197.461, 384)
+
+[node name="Timestamps" type="Node2D" parent="EditorElements" unique_id=11855529]
