@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://qhyejxa1umtl"]
+
+[ext_resource type="Script" uid="uid://befbt01itoopu" path="res://map/editor/map_editor.gd" id="1_ubnlc"]
+[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://resources/11_2_draft.tres" id="2_eti80"]
+[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://resources/11_2_draft.wav" id="4_coyij"]
+[ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://map/map_viewer.tscn" id="7_jd6p1"]
+
+[node name="MapEditor" type="Node2D" unique_id=1952026126]
+script = ExtResource("1_ubnlc")
+speed = 500
+mult = 0.205
+time = 6.457305555555552
+track_info = ExtResource("2_eti80")
+
+[node name="MapViewer" parent="." unique_id=1442470313 instance=ExtResource("7_jd6p1")]
+speed = 500
+track_info = ExtResource("2_eti80")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1535071181]
+stream = ExtResource("4_coyij")
+pitch_scale = 0.205
+stream_paused = true
+
+[node name="EditorElements" type="Node2D" parent="." unique_id=649489225]
+
+[node name="TrackTimeline" type="Line2D" parent="EditorElements" unique_id=998109580]
+points = PackedVector2Array(0, 384, 28082.357, 384)
+
+[node name="Timestamps" type="Node2D" parent="EditorElements" unique_id=11855529]
+
+[node name="TimeIndicator" type="Polygon2D" parent="EditorElements" unique_id=1222195392]
+position = Vector2(3228.6528, 384)
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, -32, -32, 32, -32)
+
+[node name="TimestampEditors" type="Node2D" parent="." unique_id=1317617990]

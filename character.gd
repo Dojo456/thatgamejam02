@@ -1,32 +1,39 @@
+class_name Character
 extends CharacterBody2D
 
 @onready var timer: Timer = $Timer
 
 var current_action = "none"
 
+## 'initial_pos' is the default position the character will reset to
 var initial_pos: Vector2
+## Controls how tall the jump is in terms of pixels
 @export var jump_height = Vector2(0, 128)
 
+## How long it takes to move from default position to peak of jump position
 @export var jump_time = 0.2
+## How long you will remain in the jump position before auto-reset
 @export var hang_time = 0.1
+## How long auto-reset takes to return from peak of jump to default
 @export var reset_time = 0.1
 
+## If true, character will return to default position after input
 @export var auto_resets = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	initial_pos = global_position
-	
+
+## Resets the character to default position after a 'time' delay
 func reset_in(time: float):
-	if not auto_resets:
-		initial_pos = global_position
-	
 	if auto_resets:
 		timer.start(time + hang_time)
 		var on_timeout = func():
 			current_action = "reset"
 			velocity = global_position - initial_pos / reset_time
 		timer.timeout.connect(on_timeout)
+	else: 
+		initial_pos = global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
