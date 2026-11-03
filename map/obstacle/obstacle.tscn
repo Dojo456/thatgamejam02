@@ -13,10 +13,13 @@ size = Vector2(64, 64)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1083449176]
 material = SubResource("ShaderMaterial_c7s6e")
+position = Vector2(32, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_c7s6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=429683727]
+position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_re4gk")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=232123836]
+position = Vector2(32, 0)

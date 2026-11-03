@@ -1,0 +1,11 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://bv15baqou8d1y"]
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_g28q7"]
+resource_name = "PitchShift"
+pitch_scale = 4.7619047
+oversampling = 32
+
+[resource]
+bus/0/send = &"PitchControl"
+bus/0/effect/0/effect = SubResource("AudioEffectPitchShift_g28q7")
+bus/0/effect/0/enabled = true

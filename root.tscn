@@ -2,25 +2,30 @@
 
 [ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://character.tscn" id="1_pq8q7"]
 [ext_resource type="Script" uid="uid://cnh6u68t8u754" path="res://root.gd" id="1_vvh5c"]
-[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_jnlp7"]
-[ext_resource type="PackedScene" uid="uid://qhyejxa1umtl" path="res://map/map_editor.tscn" id="3_vvh5c"]
+[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_vyht1"]
 [ext_resource type="PackedScene" uid="uid://d1axd41dswpbc" path="res://hud/hud.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://map/map_viewer.tscn" id="4_l8v81"]
+[ext_resource type="AudioStream" uid="uid://l0sf73joe2o3" path="res://resources/Shinigami Eyes.mp3" id="6_l8v81"]
 
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")
-timing_offset = 64
-track_info = ExtResource("2_jnlp7")
+time = 2.0
+start_time = 3.0
+timing_offset = 25
+track_info = ExtResource("2_vyht1")
 
 [node name="Character" parent="." unique_id=838381177 instance=ExtResource("1_pq8q7")]
 position = Vector2(64, 160)
 
 [node name="MapHolder" type="Node2D" parent="." unique_id=134841757]
-position = Vector2(128, 32)
+position = Vector2(-511, 32)
 
-[node name="MapEditor" parent="MapHolder" unique_id=1952026126 instance=ExtResource("3_vvh5c")]
+[node name="MapViewer" parent="MapHolder" unique_id=1442470313 instance=ExtResource("4_l8v81")]
 speed = 300
 
 [node name="Hud" parent="." unique_id=319789091 instance=ExtResource("4_28aoi")]
 speed = 300
+time = 2.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2079884935]
+stream = ExtResource("6_l8v81")
