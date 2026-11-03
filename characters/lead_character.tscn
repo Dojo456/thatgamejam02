@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b62wuo03h4v8k"]
+
+[ext_resource type="Script" uid="uid://bqj6up5c8qg5" path="res://characters/lead_character.gd" id="1_fr1va"]
+[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://resources/11_2_draft.tres" id="2_e4llv"]
+[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://characters/base_character.tscn" id="2_th2uj"]
+[ext_resource type="Shader" uid="uid://ctms852nbwt1y" path="res://red.gdshader" id="4_e4llv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tpxp3"]
+shader = ExtResource("4_e4llv")
+
+[node name="LeadCharacter" type="Node2D" unique_id=35823728]
+script = ExtResource("1_fr1va")
+track_info = ExtResource("2_e4llv")
+
+[node name="BaseCharacter" parent="." unique_id=838381177 instance=ExtResource("2_th2uj")]
+material = SubResource("ShaderMaterial_tpxp3")
+jump_time = 0.15
+hang_time = 0.5
+reset_time = 0.5

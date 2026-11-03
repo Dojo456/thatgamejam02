@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crljty6g7l4vq"]
+
+[ext_resource type="Script" uid="uid://bbh5y565pyphl" path="res://map/map_viewer.gd" id="1_ehkm7"]
+[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_n5qe1"]
+[ext_resource type="PackedScene" uid="uid://3mjduyqvkc7o" path="res://map/obstacle/up_obstacle.tscn" id="3_eomka"]
+[ext_resource type="PackedScene" uid="uid://csbstweo6860b" path="res://map/obstacle/down_obstacle.tscn" id="4_6u36b"]
+[ext_resource type="PackedScene" uid="uid://clicop4hf78lo" path="res://map/obstacle/right_obstacle.tscn" id="5_wk10c"]
+
+[node name="MapViewer" type="Node2D" unique_id=1442470313]
+script = ExtResource("1_ehkm7")
+track_info = ExtResource("2_n5qe1")
+obstacle_bindings = Dictionary[int, PackedScene]({
+0: ExtResource("3_eomka"),
+1: ExtResource("4_6u36b"),
+3: ExtResource("5_wk10c")
+})
+
+[node name="Obstacles" type="Node2D" parent="." unique_id=688571345]
