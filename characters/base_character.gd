@@ -1,9 +1,18 @@
-class_name Character
+class_name BaseCharacter
 extends CharacterBody2D
 
 @onready var timer: Timer = $Timer
 
-var current_action = "none"
+enum Action {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+	NONE,
+	RESET
+}
+
+var current_action: Action = Action.NONE
 
 ## 'initial_pos' is the default position the character will reset to
 var initial_pos: Vector2
@@ -29,34 +38,36 @@ func reset_in(time: float):
 	if auto_resets:
 		timer.start(time + hang_time)
 		var on_timeout = func():
-			current_action = "reset"
+			current_action = Action.RESET
 			velocity = global_position - initial_pos / reset_time
 		timer.timeout.connect(on_timeout)
 	else: 
 		initial_pos = global_position
+		
+func perform_action(action: Action):
+	match action:
+		Action.UP:
+			current_action = Action.UP
+			velocity.y = -jump_height.y / jump_time
+			reset_in(jump_time)
+		Action.DOWN:
+			current_action = Action.DOWN
+			velocity.y = jump_height.y / jump_time
+			reset_in(jump_time)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("up"):
-		current_action = "jump_up"
-		velocity.y = -jump_height.y / jump_time
-		reset_in(jump_time)
-	elif Input.is_action_just_pressed("down"):
-		current_action = "duck_down"
-		velocity.y = jump_height.y / jump_time
-		reset_in(jump_time)
-		
+func _physics_process(delta: float) -> void:		
 	match current_action:
-		"none":
+		Action.NONE:
 			velocity = Vector2.ZERO
-		"jump_up":
-			position = position.move_toward(initial_pos - jump_height, abs(velocity.y * delta))
-		"duck_down":
-			position = position.move_toward(initial_pos + jump_height, abs(velocity.y * delta))
-		"reset":
-			position = position.move_toward(initial_pos, velocity.length() * delta)
+		Action.UP:
+			global_position = global_position.move_toward(initial_pos - jump_height, abs(velocity.y * delta))
+		Action.DOWN:
+			global_position = global_position.move_toward(initial_pos + jump_height, abs(velocity.y * delta))
+		Action.RESET:
+			global_position = global_position.move_toward(initial_pos, velocity.length() * delta)
 			
-			if position.is_equal_approx(initial_pos): # reached ground
-				position = initial_pos
-				current_action = "none"
+			if global_position.is_equal_approx(initial_pos): # reached ground
+				global_position = initial_pos
+				current_action = Action.NONE
 	
