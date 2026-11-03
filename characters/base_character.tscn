@@ -1,25 +1,12 @@
 [gd_scene format=3 uid="uid://dho46a8g0nner"]
 
-[ext_resource type="Texture2D" uid="uid://bmx4d1qyx2yjn" path="res://icon.svg" id="1_glpr6"]
 [ext_resource type="Script" uid="uid://0rpim8p136el" path="res://characters/base_character.gd" id="1_pjt0s"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kkry"]
-size = Vector2(65, 65)
 
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=838381177]
 motion_mode = 1
 script = ExtResource("1_pjt0s")
 jump_height = Vector2(0, 64)
 jump_time = 0.1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024342201]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_8kkry")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=391796971]
-use_parent_material = true
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_glpr6")
 
 [node name="Timer" type="Timer" parent="." unique_id=888027317]
 process_callback = 0

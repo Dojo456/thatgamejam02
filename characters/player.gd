@@ -2,11 +2,12 @@ class_name Player
 extends Node2D
 
 @onready var char: BaseCharacter = $BaseCharacter
+@onready var sprite: AnimatedSprite2D = $BaseCharacter/AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	sprite.play("default")
 	
 func reset():
 	char.current_action = BaseCharacter.Action.NONE

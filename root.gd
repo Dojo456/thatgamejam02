@@ -27,7 +27,14 @@ var lead_initial: Vector2
 @export var map_speed = 300
 @export var time: float = 0
 @export var start_time: float = 2
+
+# Some offset variables to have more precise manual control of timing
+## timing_offset controls the number of pixels the map is offset
 @export var timing_offset: int = 96
+## lead_character_offset controls the number of pixels the lead character is offset.
+## It also is calculated into time by dividing by map_speed
+@export var lead_character_offset: int = 32
+
 ## 'track_info' holds the resouce that contains the MP3 file to be played and a list of InputTimestamps
 ## Each InputTimestamp contains a 'time' and an 'input' of either UP, DOWN, LEFT, RIGHT
 @export var track_info: TrackInfo
@@ -72,10 +79,11 @@ func _process(delta: float) -> void:
 	if not Engine.is_editor_hint():
 		time += delta
 		
-		var ts = track_info.inputs_list.get(next_timestamp_index)
-		
-		if ts and time > ts.timestamp:
-			next_timestamp_index += 1
+		if next_timestamp_index < track_info.inputs_list.size():
+			var ts = track_info.inputs_list[next_timestamp_index]
+				
+			if ts and time > ts.timestamp:
+				next_timestamp_index += 1
 		
 		if Input.is_action_just_pressed("reset"):
 			reset()
@@ -84,8 +92,12 @@ func _process(delta: float) -> void:
 	# The HUD moves the input timestamp list internally. Potentially a refactor is 
 	# to move map position logic to be internal within MapHolder as well
 	hud.time = time
-	lead_char.time = time + ((lead_initial.x - player_initial.x) / map_speed)
+	lead_char.time = time + ((lead_initial.x  + lead_character_offset - player_initial.x) / map_speed)
 	map.position.x = player_initial.x + timing_offset - (map_speed * time)
+	
+	# Propagate down speed and other values
+	map_viewer.speed = map_speed
+	hud.speed = map_speed
 	
 	# Set any audio effects, for now there are none
 	var bus_idx = AudioServer.get_bus_index("Master")

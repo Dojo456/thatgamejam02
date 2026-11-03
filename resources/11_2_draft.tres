@@ -4,10 +4,6 @@
 [ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="1_ev8cj"]
 [ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="2_bhh08"]
 
-[sub_resource type="Resource" id="Resource_qhcpp"]
-script = ExtResource("1_ev8cj")
-timestamp = 9.3
-
 [sub_resource type="Resource" id="Resource_bhh08"]
 script = ExtResource("1_ev8cj")
 timestamp = 6.2
@@ -21,9 +17,13 @@ script = ExtResource("1_ev8cj")
 timestamp = 7.0
 input = 1
 
+[sub_resource type="Resource" id="Resource_qhcpp"]
+script = ExtResource("1_ev8cj")
+timestamp = 9.3
+
 [resource]
 script = ExtResource("2_bhh08")
 name = "Rishika Draft"
 file = ExtResource("1_bhh08")
-inputs_list = Array[ExtResource("1_ev8cj")]([SubResource("Resource_qhcpp"), SubResource("Resource_bhh08"), SubResource("Resource_xb5l5"), SubResource("Resource_rvtte")])
+inputs_list = Array[ExtResource("1_ev8cj")]([SubResource("Resource_bhh08"), SubResource("Resource_xb5l5"), SubResource("Resource_rvtte"), SubResource("Resource_qhcpp")])
 metadata/_custom_type_script = "uid://b51ujcbx2nys3"
