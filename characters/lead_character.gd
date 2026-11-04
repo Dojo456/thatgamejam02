@@ -7,10 +7,11 @@ extends Node2D
 var next_timestamp_index: int = 0
 
 @onready var base_char: BaseCharacter = $BaseCharacter
+@onready var sprite: AnimatedSprite2D = $BaseCharacter/AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	sprite.play("default")
 	
 func reset():
 	time = 0.0

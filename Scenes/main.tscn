@@ -1,21 +1,48 @@
 [gd_scene format=3 uid="uid://bi81dxop40lp6"]
 
-[node name="Main" type="Node" unique_id=1538488192]
+[ext_resource type="Script" uid="uid://qeot0ixomuwa" path="res://Scenes/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bhmgjk2md1u74" path="res://Scenes/root.tscn" id="1_jjgbg"]
 
-[node name="UI" type="Node" parent="." unique_id=1034761783]
+[node name="Main" type="Node" unique_id=1538488192]
+script = ExtResource("1_bo1nx")
+
+[node name="Game" type="SubViewportContainer" parent="." unique_id=1232395510]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Game" unique_id=806207325]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+size_2d_override = Vector2i(640, 360)
+size_2d_override_stretch = true
+render_target_update_mode = 0
+
+[node name="Root" parent="Game/SubViewport" unique_id=1242185066 instance=ExtResource("1_jjgbg")]
+
+[node name="UI" type="Control" parent="." unique_id=1946116488]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1320784529]
-anchors_preset = 7
+layout_mode = 1
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -48.0
-offset_top = -248.0
 offset_right = 48.0
-offset_bottom = -182.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+alignment = 1
 
 [node name="StartButton" type="Button" parent="UI/VBoxContainer" unique_id=1307574303]
 layout_mode = 2
@@ -24,3 +51,5 @@ text = "Start Game"
 [node name="QuitButton" type="Button" parent="UI/VBoxContainer" unique_id=372471197]
 layout_mode = 2
 text = "Quit Game"
+
+[connection signal="pressed" from="UI/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

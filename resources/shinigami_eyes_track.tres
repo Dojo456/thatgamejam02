@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="2_elkpb"]
 [ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="3_ew2t5"]
 
+[sub_resource type="Resource" id="Resource_kdrg7"]
+script = ExtResource("2_elkpb")
+
 [sub_resource type="Resource" id="Resource_ew2t5"]
 script = ExtResource("2_elkpb")
 timestamp = 2.0
@@ -59,5 +62,5 @@ input = 1
 script = ExtResource("3_ew2t5")
 name = "Shinigami Eyes"
 file = ExtResource("1_wjcg6")
-inputs_list = Array[ExtResource("2_elkpb")]([SubResource("Resource_ew2t5"), SubResource("Resource_5nrha"), SubResource("Resource_eelit"), SubResource("Resource_fe601"), SubResource("Resource_ujrxl"), SubResource("Resource_dvtw1"), SubResource("Resource_8mkh2"), SubResource("Resource_roxva"), SubResource("Resource_g1bhy"), SubResource("Resource_wjcg6"), SubResource("Resource_elkpb")])
+inputs_list = Array[ExtResource("2_elkpb")]([SubResource("Resource_kdrg7"), SubResource("Resource_ew2t5"), SubResource("Resource_5nrha"), SubResource("Resource_eelit"), SubResource("Resource_fe601"), SubResource("Resource_ujrxl"), SubResource("Resource_dvtw1"), SubResource("Resource_8mkh2"), SubResource("Resource_roxva"), SubResource("Resource_g1bhy"), SubResource("Resource_wjcg6"), SubResource("Resource_elkpb")])
 metadata/_custom_type_script = "uid://b51ujcbx2nys3"

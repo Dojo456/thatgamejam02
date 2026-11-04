@@ -1,8 +1,8 @@
 @tool
 ## The MapEditor is probably the most important scene in the project as it allows
-## for the easy editting of [code]TrackInfo[/code] resources. It can also be used
-## as the main rendering engine for any given TrackInfo resource by just removing
-## all the editor only elements.
+## for the easy editting of [code]TrackInfo[/code] resources. 
+## 
+## It can also be used as the main rendering engine for any given TrackInfo resource by just removing all the editor only elements.
 class_name MapEditor
 extends Node2D
 
@@ -25,7 +25,7 @@ extends Node2D
 @export var timeline_pos: int = 384
 
 ## Speed in pixels per second
-@export var speed: int = 64
+@export var speed: int = 300
 
 ## Speed multiplier to control playback speed
 @export var mult: float = 1.0:
