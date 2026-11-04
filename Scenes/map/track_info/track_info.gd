@@ -3,7 +3,7 @@ class_name TrackInfo
 extends Resource
 
 @export var name: String
-@export var file: AudioStreamMP3
+@export var file: AudioStreamMP3 ##audio file being played
 
 @export var inputs_list: Array[InputTimestamp]:
 	set(val):

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bhmgjk2md1u74"]
 
-[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://character.tscn" id="1_pq8q7"]
-[ext_resource type="Script" uid="uid://cnh6u68t8u754" path="res://root.gd" id="1_vvh5c"]
-[ext_resource type="PackedScene" uid="uid://ddtvrscqt3kjw" path="res://map/map.tscn" id="2_pyidc"]
-[ext_resource type="PackedScene" uid="uid://bx46jclw6mqs0" path="res://map/map2.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://Scenes/character.tscn" id="1_pq8q7"]
+[ext_resource type="Script" uid="uid://cnh6u68t8u754" path="res://Scenes/Scripts/root.gd" id="1_vvh5c"]
+[ext_resource type="PackedScene" uid="uid://ddtvrscqt3kjw" path="res://Scenes/map/map.tscn" id="2_pyidc"]
+[ext_resource type="PackedScene" uid="uid://bx46jclw6mqs0" path="res://Scenes/map/map2.tscn" id="4_28aoi"]
 
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")

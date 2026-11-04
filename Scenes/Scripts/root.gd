@@ -5,18 +5,18 @@ extends Node2D
 @onready var map = $MapHolder
 @onready var char = $Character
 
-var map_initial: Vector2
-var char_initial: Vector2
+var map_initial: Vector2 ## initial position of map on screen
+var char_initial: Vector2 ## initial position of character on screen
 
 @export var map_speed = 300
-@export var time: float = 0
+@export var time: float = 0 ##time elapsed?
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	map_initial = map.position
 	char_initial = char.position
 
-func reset(): 
+func reset(): ## should reset the screen to default settings, including chars, map, score, etc
 	char.position = char_initial
 	char.velocity = Vector2.ZERO
 	char.current_action = "none"

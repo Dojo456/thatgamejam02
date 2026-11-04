@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bgs22h8t2t82o"]
+
+[ext_resource type="Shader" uid="uid://dcq0jtqpfd80s" path="res://Scenes/Shaders/follow_character_glow.gdshader" id="1_86mid"]
+[ext_resource type="Texture2D" uid="uid://bemuyely3y268" path="res://Assets/AnimationFrames/godot_logo_1.png" id="2_t1dsp"]
+[ext_resource type="Texture2D" uid="uid://c3it4s5uk621a" path="res://Assets/AnimationFrames/godot_logo_2.png" id="3_t1ghy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t1dsp"]
+shader = ExtResource("1_86mid")
+shader_parameter/outline_color = Color(0, 5, 5, 1)
+shader_parameter/outline_width = 2.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrwh1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t1dsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t1ghy")
+}],
+"loop": 1,
+"name": &"running",
+"speed": 2.0
+}]
+
+[sub_resource type="Environment" id="Environment_rrwh1"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.84
+glow_bloom = 0.2
+
+[node name="followCharacter" type="Node2D" unique_id=1847993674]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078603979]
+material = SubResource("ShaderMaterial_t1dsp")
+position = Vector2(218.24997, 176.24995)
+scale = Vector2(0.22998053, 0.20654301)
+sprite_frames = SubResource("SpriteFrames_rrwh1")
+animation = &"running"
+frame_progress = 0.93767107
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=954071535]
+environment = SubResource("Environment_rrwh1")

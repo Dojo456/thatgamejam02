@@ -6,7 +6,7 @@ enum Inputs {
 	DOWN,
 	LEFT,
 	RIGHT
-}
+} ##possible inputs for player character
 
 @export var timestamp: float
 @export var input: Inputs

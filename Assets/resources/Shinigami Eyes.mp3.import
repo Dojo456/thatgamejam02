@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l0sf73joe2o3"
+path="res://.godot/imported/Shinigami Eyes.mp3-c0c4302b910ecd8ecadfa387fdbca29e.mp3str"
+
+[deps]
+
+source_file="res://Assets/resources/Shinigami Eyes.mp3"
+dest_files=["res://.godot/imported/Shinigami Eyes.mp3-c0c4302b910ecd8ecadfa387fdbca29e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

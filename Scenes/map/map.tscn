@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ddtvrscqt3kjw"]
 
-[ext_resource type="TileSet" uid="uid://deg22tkmfm2h3" path="res://map/placeholder_tilset.tres" id="1_hgrid"]
+[ext_resource type="TileSet" uid="uid://deg22tkmfm2h3" path="res://Scenes/map/placeholder_tilset.tres" id="1_hgrid"]
 
 [node name="Map" type="Node2D" unique_id=2013848141]
 

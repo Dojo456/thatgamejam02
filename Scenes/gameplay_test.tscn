@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dnl5henpvisu2"]
+
+[ext_resource type="Script" uid="uid://dsmbpy1d3isx5" path="res://Scenes/Scripts/gameplay_test.gd" id="1_6kpuu"]
+[ext_resource type="PackedScene" uid="uid://bgs22h8t2t82o" path="res://Scenes/follow_character.tscn" id="1_avdyb"]
+
+[node name="rafatGameplayTest" type="Node2D" unique_id=1966474643]
+script = ExtResource("1_6kpuu")
+
+[node name="followCharacter" parent="." unique_id=1847993674 instance=ExtResource("1_avdyb")]
+position = Vector2(340, 168)
+scale = Vector2(0.2, 0.2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1519287844]
