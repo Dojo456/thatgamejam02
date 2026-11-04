@@ -2,6 +2,9 @@
 
 [sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
 resource_name = "PitchShift"
+pitch_scale = 1.0526316
+oversampling = 32
+fft_size = 4
 
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectPitchShift_j3pel")

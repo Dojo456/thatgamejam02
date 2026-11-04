@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="thatgamejam02"
-run/main_scene="uid://bhmgjk2md1u74"
+run/main_scene="uid://bi81dxop40lp6"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

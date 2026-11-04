@@ -47,7 +47,8 @@ animations = [{
 script = ExtResource("1_3eadt")
 
 [node name="BaseCharacter" parent="." unique_id=838381177 instance=ExtResource("1_dnjla")]
-jump_time = 0.2
+jump_time = 0.15
+reset_time = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCharacter" unique_id=310571741]
 shape = SubResource("RectangleShape2D_4ksp0")

@@ -1,12 +1,13 @@
 @tool
 
 ## The root node contains the majority of the game logic, more specifically these components:
-## - Handles root time tracker via the 'time' variable
-## - Track info loading and audio playing
-## - Moves the map based on 'time'
-## - Propagates 'time' down to the 'Hud' node, which handles time internally
-## - Compares user inputs with the expected 'track_info' inputs
-
+##
+## - Handles root time tracker via the 'time' variable [br]
+## - Track info loading and audio playing [br]
+## - Moves the map based on 'time' [br]
+## - Propagates 'time' down to the 'Hud' node, which handles time internally [br]
+## - Compares user inputs with the expected 'track_info' inputs [br]
+class_name Root
 extends Node2D
 
 @onready var map = $MapHolder
