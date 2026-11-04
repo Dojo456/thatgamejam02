@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://3mjduyqvkc7o" path="res://map/obstacle/up_obstacle.tscn" id="3_eomka"]
 [ext_resource type="PackedScene" uid="uid://csbstweo6860b" path="res://map/obstacle/down_obstacle.tscn" id="4_6u36b"]
 [ext_resource type="PackedScene" uid="uid://clicop4hf78lo" path="res://map/obstacle/right_obstacle.tscn" id="5_wk10c"]
+[ext_resource type="PackedScene" uid="uid://dundk5crxayct" path="res://map/obstacle/left_obstacle.tscn" id="6_6u36b"]
 
 [node name="MapViewer" type="Node2D" unique_id=1442470313]
 script = ExtResource("1_ehkm7")
@@ -12,6 +13,7 @@ track_info = ExtResource("2_n5qe1")
 obstacle_bindings = Dictionary[int, PackedScene]({
 0: ExtResource("3_eomka"),
 1: ExtResource("4_6u36b"),
+2: ExtResource("6_6u36b"),
 3: ExtResource("5_wk10c")
 })
 
