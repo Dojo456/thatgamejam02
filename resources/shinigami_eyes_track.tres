@@ -8,52 +8,63 @@
 script = ExtResource("2_elkpb")
 
 [sub_resource type="Resource" id="Resource_ew2t5"]
+resource_name = "2.00 - 0"
 script = ExtResource("2_elkpb")
 timestamp = 2.0
 
 [sub_resource type="Resource" id="Resource_5nrha"]
+resource_name = "4.00 - 0"
 script = ExtResource("2_elkpb")
 timestamp = 4.0
 
 [sub_resource type="Resource" id="Resource_eelit"]
+resource_name = "6.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 6.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_fe601"]
+resource_name = "9.20 - 0"
 script = ExtResource("2_elkpb")
 timestamp = 9.2
 
 [sub_resource type="Resource" id="Resource_ujrxl"]
+resource_name = "12.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 12.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_dvtw1"]
+resource_name = "14.00 - 0"
 script = ExtResource("2_elkpb")
 timestamp = 14.0
 
 [sub_resource type="Resource" id="Resource_8mkh2"]
+resource_name = "16.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 16.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_roxva"]
+resource_name = "19.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 19.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_g1bhy"]
+resource_name = "23.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 23.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_wjcg6"]
+resource_name = "25.00 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 25.0
 input = 1
 
 [sub_resource type="Resource" id="Resource_elkpb"]
+resource_name = "27.99 - 1"
 script = ExtResource("2_elkpb")
 timestamp = 27.99
 input = 1

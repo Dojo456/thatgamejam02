@@ -7,12 +7,13 @@
 
 [node name="MapEditor" type="Node2D" unique_id=1952026126]
 script = ExtResource("1_ubnlc")
+speed = 397
 mult = 0.66
 time = 5.22
 track_info = ExtResource("2_eti80")
 
 [node name="MapViewer" parent="." unique_id=1442470313 instance=ExtResource("7_jd6p1")]
-speed = 300
+speed = 397
 track_info = ExtResource("2_eti80")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1535071181]
@@ -23,12 +24,12 @@ stream_paused = true
 [node name="EditorElements" type="Node2D" parent="." unique_id=649489225]
 
 [node name="TrackTimeline" type="Line2D" parent="EditorElements" unique_id=998109580]
-points = PackedVector2Array(0, 384, 16849.414, 384)
+points = PackedVector2Array(0, 384, 22297.393, 384)
 
 [node name="Timestamps" type="Node2D" parent="EditorElements" unique_id=11855529]
 
 [node name="TimeIndicator" type="Polygon2D" parent="EditorElements" unique_id=1222195392]
-position = Vector2(1566, 384)
+position = Vector2(2072.34, 384)
 color = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(0, 0, -32, -32, 32, -32)
 
