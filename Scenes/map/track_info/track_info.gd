@@ -3,7 +3,7 @@ class_name TrackInfo
 extends Resource
 
 @export var name: String
-@export var file: AudioStreamMP3 ##audio file being played
+@export var file: AudioStream
 
 @export var inputs_list: Array[InputTimestamp]:
 	set(val):
@@ -34,7 +34,3 @@ func _replace_nulls(arr: Array[InputTimestamp]) -> Array[InputTimestamp]:
 	cleaned.sort_custom(sort_func)
 	
 	return cleaned
-
-func _init() -> void:
-	for input in inputs_list:
-		input.resize(2)
