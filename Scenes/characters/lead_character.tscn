@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://b62wuo03h4v8k"]
+
+[ext_resource type="Shader" uid="uid://dcq0jtqpfd80s" path="res://Scenes/Shaders/follow_character_glow_outline.gdshader" id="1_6iuiq"]
+[ext_resource type="Script" uid="uid://bqj6up5c8qg5" path="res://Scenes/characters/lead_character.gd" id="1_fr1va"]
+[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://Assets/resources/11_2_draft.tres" id="2_e4llv"]
+[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://Scenes/characters/base_character.tscn" id="2_th2uj"]
+[ext_resource type="Texture2D" uid="uid://do6l5cxsthuai" path="res://Assets/AnimationFrames/foxgray-Sheet.png" id="5_tpxp3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j3pel"]
+shader = ExtResource("1_6iuiq")
+shader_parameter/outline_color = Color(0, 2, 2, 1)
+shader_parameter/outline_width = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iuiq"]
+atlas = ExtResource("5_tpxp3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2p34"]
+atlas = ExtResource("5_tpxp3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo48j"]
+atlas = ExtResource("5_tpxp3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp76k"]
+atlas = ExtResource("5_tpxp3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ksp0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iuiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2p34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo48j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp76k")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ksp0"]
+size = Vector2(32, 32)
+
+[node name="LeadCharacter" type="Node2D" unique_id=35823728]
+material = SubResource("ShaderMaterial_j3pel")
+script = ExtResource("1_fr1va")
+track_info = ExtResource("2_e4llv")
+
+[node name="BaseCharacter" parent="." unique_id=838381177 instance=ExtResource("2_th2uj")]
+use_parent_material = true
+jump_time = 0.05
+hang_time = 0.2
+reset_time = 0.2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=931392161]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_4ksp0")
+frame = 2
+frame_progress = 0.20258915
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCharacter" unique_id=1263223555]
+visible = false
+shape = SubResource("RectangleShape2D_4ksp0")

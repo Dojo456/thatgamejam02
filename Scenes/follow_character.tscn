@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bgs22h8t2t82o"]
 
-[ext_resource type="Shader" uid="uid://dcq0jtqpfd80s" path="res://Scenes/Shaders/follow_character_glow.gdshader" id="1_86mid"]
+[ext_resource type="Shader" uid="uid://dniweelwjibqa" path="res://Scenes/Shaders/trail.gdshader" id="1_t1dsp"]
 [ext_resource type="Texture2D" uid="uid://bemuyely3y268" path="res://Assets/AnimationFrames/godot_logo_1.png" id="2_t1dsp"]
 [ext_resource type="Texture2D" uid="uid://c3it4s5uk621a" path="res://Assets/AnimationFrames/godot_logo_2.png" id="3_t1ghy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t1dsp"]
-shader = ExtResource("1_86mid")
-shader_parameter/outline_color = Color(0, 5, 5, 1)
-shader_parameter/outline_width = 2.0
+shader = ExtResource("1_t1dsp")
+shader_parameter/decay_time = 1.5
+shader_parameter/trail_size = 4.0
+shader_parameter/trail_color = Color(0, 2, 2, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rrwh1"]
 animations = [{

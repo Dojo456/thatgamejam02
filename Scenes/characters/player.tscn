@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c62isflgu367"]
 
-[ext_resource type="Script" uid="uid://bvp3cqu1oqdf4" path="res://characters/player.gd" id="1_3eadt"]
-[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://characters/base_character.tscn" id="1_dnjla"]
-[ext_resource type="Texture2D" uid="uid://c8b57dybisqck" path="res://characters/fox-proto-Sheet.png" id="3_tory2"]
+[ext_resource type="Script" uid="uid://bvp3cqu1oqdf4" path="res://Scenes/characters/player.gd" id="1_3eadt"]
+[ext_resource type="PackedScene" uid="uid://dho46a8g0nner" path="res://Scenes/characters/base_character.tscn" id="1_dnjla"]
+[ext_resource type="Texture2D" uid="uid://c8b57dybisqck" path="res://Assets/AnimationFrames/fox-proto-Sheet.png" id="3_tory2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ksp0"]
 size = Vector2(32, 32)

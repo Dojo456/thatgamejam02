@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://bhmgjk2md1u74"]
 
 [ext_resource type="Script" uid="uid://cnh6u68t8u754" path="res://Scenes/root.gd" id="1_vvh5c"]
-[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://resources/11_2_draft.tres" id="2_l8v81"]
-[ext_resource type="PackedScene" uid="uid://c62isflgu367" path="res://characters/player.tscn" id="3_l8v81"]
-[ext_resource type="PackedScene" uid="uid://b62wuo03h4v8k" path="res://characters/lead_character.tscn" id="3_vyht1"]
-[ext_resource type="PackedScene" uid="uid://d1axd41dswpbc" path="res://hud/hud.tscn" id="4_28aoi"]
-[ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://map/map_viewer.tscn" id="4_l8v81"]
-[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://resources/11_2_draft.wav" id="6_l8v81"]
+[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://Assets/resources/11_2_draft.tres" id="2_l8v81"]
+[ext_resource type="PackedScene" uid="uid://c62isflgu367" path="res://Scenes/characters/player.tscn" id="3_l8v81"]
+[ext_resource type="PackedScene" uid="uid://b62wuo03h4v8k" path="res://Scenes/characters/lead_character.tscn" id="3_vyht1"]
+[ext_resource type="PackedScene" uid="uid://d1axd41dswpbc" path="res://Scenes/hud/hud.tscn" id="4_28aoi"]
+[ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://Scenes/map/map_viewer.tscn" id="4_l8v81"]
+[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://Assets/resources/11_2_draft.wav" id="6_l8v81"]
+
+[sub_resource type="Environment" id="Environment_j3pel"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.84
+glow_bloom = 0.2
 
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")
@@ -18,6 +24,10 @@ track_info = ExtResource("2_l8v81")
 [node name="LeadCharacter" parent="." unique_id=35823728 instance=ExtResource("3_vyht1")]
 position = Vector2(320, 160)
 time = 0.7866666666666666
+
+[node name="Line2D" type="Line2D" parent="LeadCharacter" unique_id=996833657]
+position = Vector2(-320, -160)
+points = PackedVector2Array(690, 161)
 
 [node name="Player" parent="." unique_id=485475503 instance=ExtResource("3_l8v81")]
 position = Vector2(64, 160)
@@ -35,3 +45,6 @@ speed = 300
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2079884935]
 stream = ExtResource("6_l8v81")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1874960499]
+environment = SubResource("Environment_j3pel")

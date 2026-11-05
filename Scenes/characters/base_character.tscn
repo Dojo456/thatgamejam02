@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dho46a8g0nner"]
 
-[ext_resource type="Script" uid="uid://0rpim8p136el" path="res://characters/base_character.gd" id="1_pjt0s"]
+[ext_resource type="Script" uid="uid://0rpim8p136el" path="res://Scenes/characters/base_character.gd" id="1_pjt0s"]
 
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=838381177]
 motion_mode = 1

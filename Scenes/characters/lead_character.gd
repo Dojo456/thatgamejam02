@@ -39,4 +39,3 @@ func _process(delta: float) -> void:
 		if ts.timestamp < time + base_char.jump_time:
 			base_char.perform_action(bindings[ts.input])
 			next_timestamp_index += 1
-	

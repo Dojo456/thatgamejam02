@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TrackInfo" format=3 uid="uid://u6mlunrubwt1"]
 
-[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://resources/11_2_draft.wav" id="1_bhh08"]
-[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="1_ev8cj"]
-[ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="2_bhh08"]
+[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://Assets/resources/11_2_draft.wav" id="1_bhh08"]
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://Scenes/map/track_info/input_timestamp.gd" id="1_ev8cj"]
+[ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://Scenes/map/track_info/track_info.gd" id="2_bhh08"]
 
 [sub_resource type="Resource" id="Resource_bhh08"]
 script = ExtResource("1_ev8cj")

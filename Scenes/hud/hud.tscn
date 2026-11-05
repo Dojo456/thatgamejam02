@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d1axd41dswpbc"]
 
-[ext_resource type="Script" uid="uid://dl2wtv56ucefs" path="res://hud/hud.gd" id="1_6ca3a"]
-[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_2gk58"]
-[ext_resource type="PackedScene" uid="uid://ceymhuijr501f" path="res://hud/input_indicator.tscn" id="3_318vg"]
+[ext_resource type="Script" uid="uid://dl2wtv56ucefs" path="res://Scenes/hud/hud.gd" id="1_6ca3a"]
+[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://Assets/resources/shinigami_eyes_track.tres" id="2_2gk58"]
+[ext_resource type="PackedScene" uid="uid://ceymhuijr501f" path="res://Scenes/hud/input_indicator.tscn" id="3_318vg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fefj0"]
 bg_color = Color(0.94260496, 0.74902445, 0.08064415, 1)

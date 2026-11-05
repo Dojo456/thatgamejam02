@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do6l5cxsthuai"
-path="res://.godot/imported/foxgray-Sheet.png-756a163cb51d4b5c40fd8e26b412b4bd.ctex"
+uid="uid://c8b57dybisqck"
+path="res://.godot/imported/fox-proto-Sheet.png-38d25e9267506323ca968e693ff7cc89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/foxgray-Sheet.png"
-dest_files=["res://.godot/imported/foxgray-Sheet.png-756a163cb51d4b5c40fd8e26b412b4bd.ctex"]
+source_file="res://Assets/AnimationFrames/fox-proto-Sheet.png"
+dest_files=["res://.godot/imported/fox-proto-Sheet.png-38d25e9267506323ca968e693ff7cc89.ctex"]
 
 [params]
 
