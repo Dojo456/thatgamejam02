@@ -5,29 +5,29 @@
 [ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="2_bhh08"]
 
 [sub_resource type="Resource" id="Resource_bhh08"]
-resource_name = "6.20 - 0"
+resource_name = "6.20 - UP"
 script = ExtResource("1_ev8cj")
 timestamp = 6.2
 
 [sub_resource type="Resource" id="Resource_8shgu"]
-resource_name = "6.80 - 0"
+resource_name = "6.80 - UP"
 script = ExtResource("1_ev8cj")
 timestamp = 6.8
 
 [sub_resource type="Resource" id="Resource_xb5l5"]
-resource_name = "7.24 - 1"
+resource_name = "7.24 - DOWN"
 script = ExtResource("1_ev8cj")
 timestamp = 7.235
 input = 1
 
 [sub_resource type="Resource" id="Resource_rvtte"]
-resource_name = "7.70 - 1"
+resource_name = "7.70 - DOWN"
 script = ExtResource("1_ev8cj")
 timestamp = 7.695
 input = 1
 
 [sub_resource type="Resource" id="Resource_qhcpp"]
-resource_name = "9.48 - 0"
+resource_name = "9.48 - UP"
 script = ExtResource("1_ev8cj")
 timestamp = 9.485
 
