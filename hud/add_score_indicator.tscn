@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dob0g5w4vexk6"]
+
+[ext_resource type="Script" uid="uid://boj83bnhijvvr" path="res://hud/add_score_indicator.gd" id="1_klm83"]
+
+[node name="AddScoreIndicator" type="Control" unique_id=1560604636]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0248595
+offset_top = -60.0
+offset_right = -1.0248595
+offset_bottom = -60.0
+script = ExtResource("1_klm83")
+
+[node name="Label" type="Label" parent="." unique_id=826327941]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "-0"

@@ -1,7 +1,9 @@
+@tool
+
 class_name Player
 extends Node2D
 
-@onready var char: BaseCharacter = $BaseCharacter
+@onready var base_char: BaseCharacter = $BaseCharacter
 @onready var sprite: AnimatedSprite2D = $BaseCharacter/AnimatedSprite2D
 
 
@@ -10,14 +12,14 @@ func _ready() -> void:
 	sprite.play("default")
 	
 func reset():
-	char.current_action = BaseCharacter.Action.NONE
-	char.velocity = Vector2.ZERO
+	base_char.current_action = BaseCharacter.Action.NONE
+	base_char.velocity = Vector2.ZERO
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("up"):
-		char.perform_action(BaseCharacter.Action.UP)
+		base_char.perform_action(BaseCharacter.Action.UP)
 	elif event.is_action_pressed("down"):
-		char.perform_action(BaseCharacter.Action.DOWN)
+		base_char.perform_action(BaseCharacter.Action.DOWN)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

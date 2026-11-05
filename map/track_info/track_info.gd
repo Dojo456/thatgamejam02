@@ -12,6 +12,8 @@ extends Resource
 
 func _manual_clean() -> void:
 	inputs_list = _replace_nulls(inputs_list)
+	for input in inputs_list:
+		input._set_name()
 	notify_property_list_changed()
 	
 @export_tool_button("Clean Nulls in Array")

@@ -2,7 +2,6 @@
 
 [sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
 resource_name = "PitchShift"
-pitch_scale = 1.5151515
 oversampling = 32
 fft_size = 4
 

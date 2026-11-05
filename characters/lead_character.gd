@@ -1,3 +1,5 @@
+@tool
+
 class_name LeadCharacter
 extends Node2D
 
@@ -26,7 +28,7 @@ var bindings: Dictionary[InputTimestamp.Inputs, BaseCharacter.Action] = {
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not track_info or track_info.inputs_list.size() <= 0:
+	if Engine.is_editor_hint() or not track_info or track_info.inputs_list.size() <= 0:
 		return
 		
 	if next_timestamp_index < track_info.inputs_list.size():
