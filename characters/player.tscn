@@ -233,7 +233,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"duck",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -262,7 +262,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"fallback",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -320,7 +320,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"hit",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -349,7 +349,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"jump",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -378,7 +378,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Player" type="Node2D" unique_id=485475503]
@@ -394,4 +394,3 @@ shape = SubResource("RectangleShape2D_4ksp0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=311320082]
 sprite_frames = SubResource("SpriteFrames_3eadt")
 animation = &"run"
-frame_progress = 0.16441841
