@@ -10,6 +10,8 @@
 class_name Root
 extends Node2D
 
+@export var debug = true
+
 @onready var map = $MapHolder
 @onready var map_viewer: MapViewer = $MapHolder/MapViewer
 
@@ -93,6 +95,8 @@ var hud_color_timings: Dictionary[float, Color] = {
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	hud.debug = debug
+	
 	var ts: InputTimestamp
 	# Technically we dont need this if statement is better designed, but easier this way to add a redundant check
 	if next_timestamp_index < track_info.inputs_list.size():

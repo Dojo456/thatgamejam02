@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://ceymhuijr501f"]
 
 [ext_resource type="Script" uid="uid://c7md8deodb6mv" path="res://hud/input_indicator.gd" id="1_ea5fo"]
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="2_qvlrf"]
+
+[sub_resource type="Resource" id="Resource_ea5fo"]
+resource_name = "123.00 - UP"
+script = ExtResource("2_qvlrf")
+timestamp = 123.0
+metadata/_custom_type_script = "uid://d2nh3pw2v5wmi"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ksp0"]
 bg_color = Color(0, 0.6596331, 0.84676677, 1)
@@ -19,6 +26,7 @@ offset_right = 40.0
 offset_bottom = 20.0
 grow_vertical = 2
 script = ExtResource("1_ea5fo")
+input = SubResource("Resource_ea5fo")
 
 [node name="Label" type="Label" parent="." unique_id=919359806]
 layout_mode = 1
@@ -28,7 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_4ksp0")
-text = "D"
+text = "W"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -40,5 +48,5 @@ anchor_bottom = 1.125
 offset_top = -10.0
 offset_right = 40.0
 offset_bottom = 13.0
-text = "0"
+text = "123.0"
 horizontal_alignment = 1

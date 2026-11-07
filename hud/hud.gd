@@ -2,11 +2,14 @@
 class_name Hud
 extends Control
 
+@export var debug = true
+
 @onready var input_bar = $Panel
 @onready var input_indicator = $Panel/Button
 @onready var input_timestamps = $Panel/Control
 
 # Debug
+@onready var debug_hud: Control = $Debug
 @onready var time_label: Label = $Debug/TimeLabel
 @onready var fps_counter: Label = $Debug/FPSCounter
 
@@ -56,6 +59,8 @@ func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		_rebuild_input_indicators()
 		
+	debug_hud.visible = debug
+		
 	fps_counter.text = "%.2f fps" % Engine.get_frames_per_second()
 		
 	input_timestamps.position.x = time * speed * -1
@@ -68,6 +73,7 @@ func _rebuild_input_indicators():
 	
 	for input in track_info.inputs_list:
 		var i: InputIndicator = input_indicator_scene.instantiate()
+		i.debug = debug
 		i.input = input
 		i.position.x = (input.timestamp * speed) + timing_offset + input_offset
 		
