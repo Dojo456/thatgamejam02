@@ -1,0 +1,154 @@
+# Key: A minor / C major.
+
+use_bpm 150
+use_debug false
+
+# Chords change every 2 bars: Am7 - Fmaj7 - Cmaj7 - G  (8-bar cycle)
+progression = [
+  chord(:a3, :minor7),
+  chord(:f3, :major7),
+  chord(:c4, :major7),
+  chord(:g3, :major)
+]
+
+hook = [
+  [[:e5, 1], [:a5, 0.5], [:c6, 0.5], [:b5, 1], [:a5, 1]],
+  [[:e5, 0.5], [:a5, 0.5], [:c6, 1], [:e6, 1], [:c6, 0.5], [:b5, 0.5]],
+  [[:a5, 1], [:g5, 0.5], [:e5, 0.5], [:f5, 1], [:e5, 1]],
+  [[:c6, 1], [:a5, 0.5], [:g5, 0.5], [:f5, 1], [:a5, 1]],
+  [[:g5, 0.5], [:e5, 0.5], [:c5, 1], [:e5, 1], [:g5, 1]],
+  [[:e5, 0.5], [:g5, 0.5], [:c6, 1], [:b5, 1], [:g5, 1]],
+  [[:b5, 1], [:a5, 0.5], [:g5, 0.5], [:d5, 2]],
+  [[:d6, 1], [:b5, 0.5], [:a5, 0.5], [:g5, 1], [:d5, 1]]
+]
+
+set :part, :intro
+set :sec_bar, 0
+set :chord_i, 0
+set :hook_i, 0
+
+# ---------- Conductor ----------
+# 8 + 8 + 16 + 8 + 16 + 8 = 64 bars
+live_loop :conductor do
+  [
+    [:intro, 8],
+    [:verse, 8],
+    [:chorus, 16],
+    [:break, 8],
+    [:chorus, 16],
+    [:outro, 8]
+  ].each do |name, bars|
+    set :part, name
+    bars.times do |i|
+      set :sec_bar, i
+      set :chord_i, (i / 2) % 4
+      set :hook_i, i % 8
+      cue :bar
+      sleep 4
+    end
+  end
+end
+
+# wind
+live_loop :wind do
+  with_fx :lpf, cutoff: rrand(80, 100) do
+    synth :cnoise, attack: 8, release: 8, amp: 0.2, pan: rrand(-0.6, 0.6)
+  end
+  sleep 16
+end
+
+# glass
+live_loop :pad, sync: :bar do
+  if get(:sec_bar).even?
+    use_synth :hollow
+    with_fx :reverb, room: 0.9, mix: 0.6 do
+      play progression[get(:chord_i)], attack: 3, sustain: 3, release: 2, amp: 1.5
+    end
+  end
+  sleep 4
+end
+
+# sub bass
+live_loop :bass, sync: :bar do
+  part = get(:part)
+  if part == :verse || part == :chorus
+    root = progression[get(:chord_i)][0] - 24
+    use_synth :sine
+    play root, sustain: 2.2, release: 0.3, amp: 1.2
+    if part == :chorus
+      use_synth :tri
+      with_fx :lpf, cutoff: 75 do
+        play root + 12, sustain: 2.2, release: 0.3, amp: 0.5
+      end
+      use_synth :sine
+    end
+    sleep 2.5
+    play root + 7, release: 0.4, amp: 1
+    sleep 0.5
+    play root, release: 0.4, amp: 1
+    sleep 1
+  else
+    sleep 4
+  end
+end
+
+# breakbeat
+live_loop :beat, sync: :bar do
+  part = get(:part)
+  i = get(:sec_bar)
+  full = (part == :chorus)
+  drums = (part == :verse || part == :chorus)
+  hats_only = (part == :intro && i >= 4)
+  fill = (part == :verse && i == 7)
+  
+  if drums || hats_only
+    16.times do |s|
+      if drums
+        sample :bd_fat, amp: 1.4 if [0, 10].include?(s)
+        sample :drum_snare_hard, amp: 0.8 if [4, 12].include?(s)
+        sample :drum_snare_soft, amp: 0.3 if (full && [7, 15].include?(s)) || (!full && s == 15)
+        sample :drum_snare_hard, amp: 0.4 + 0.1 * (s - 12) if fill && [13, 14, 15].include?(s)
+      end
+      sample :drum_cymbal_closed, amp: (s % 4 == 2 ? 0.25 : 0.12), finish: 0.15 if s.even?
+      sleep 0.25
+    end
+  else
+    sleep 4
+  end
+end
+
+# ---------- Riser into the chorus, crash on the drop ----------
+live_loop :fx, sync: :bar do
+  part = get(:part)
+  i = get(:sec_bar)
+  if (part == :verse || part == :break) && i == 7
+    with_fx :hpf, cutoff: 50, cutoff_slide: 4 do |f|
+      synth :cnoise, attack: 4, release: 0.2, amp: 0.4
+      control f, cutoff: 120
+      sleep 4
+    end
+  else
+    sample :drum_cymbal_open, amp: 0.6, finish: 0.4 if part == :chorus && i == 0
+    sleep 4
+  end
+end
+
+# hook
+live_loop :ice, sync: :bar do
+  part = get(:part)
+  phrase = hook[get(:hook_i)]
+  use_synth(part == :chorus ? :pretty_bell : :kalimba)
+  with_fx :echo, phase: 0.75, decay: 3, mix: 0.3 do
+    with_fx :reverb, room: 0.9, mix: 0.5 do
+      if part == :intro || part == :outro
+        play phrase[0][0], release: 2, amp: 0.7 if get(:sec_bar).even?
+        sleep 4
+      else
+        phrase.each do |n, d|
+          play n, release: 0.8, amp: 1
+          sleep d
+        end
+      end
+    end
+  end
+end
