@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b62wuo03h4v8k" path="res://characters/lead_character.tscn" id="3_vyht1"]
 [ext_resource type="PackedScene" uid="uid://d1axd41dswpbc" path="res://hud/hud.tscn" id="4_28aoi"]
 [ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://map/map_viewer.tscn" id="4_l8v81"]
-[ext_resource type="AudioStream" uid="uid://dvwkljq6hkufw" path="res://resources/11_2_draft.wav" id="6_l8v81"]
+[ext_resource type="AudioStream" uid="uid://l0sf73joe2o3" path="res://resources/Shinigami Eyes.mp3" id="6_l8v81"]
 
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")

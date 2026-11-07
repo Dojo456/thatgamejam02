@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bi81dxop40lp6"]
 
 [ext_resource type="Script" uid="uid://qeot0ixomuwa" path="res://Scenes/main.gd" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://bhmgjk2md1u74" path="res://Scenes/root.tscn" id="1_jjgbg"]
 
 [node name="Main" type="Node" unique_id=1538488192]
+process_mode = 3
 script = ExtResource("1_bo1nx")
 
 [node name="Game" type="SubViewportContainer" parent="." unique_id=1232395510]
+process_mode = 1
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,12 +18,10 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="Game" unique_id=806207325]
 handle_input_locally = false
-size = Vector2i(1920, 1080)
+size = Vector2i(640, 360)
 size_2d_override = Vector2i(640, 360)
 size_2d_override_stretch = true
 render_target_update_mode = 0
-
-[node name="Root" parent="Game/SubViewport" unique_id=1242185066 instance=ExtResource("1_jjgbg")]
 
 [node name="UI" type="Control" parent="." unique_id=1946116488]
 layout_mode = 3
