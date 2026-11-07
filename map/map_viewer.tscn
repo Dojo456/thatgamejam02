@@ -18,3 +18,5 @@ obstacle_bindings = Dictionary[int, PackedScene]({
 })
 
 [node name="Obstacles" type="Node2D" parent="." unique_id=688571345]
+
+[node name="Static" type="Node2D" parent="." unique_id=1538224593]

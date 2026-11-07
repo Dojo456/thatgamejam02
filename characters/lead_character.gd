@@ -13,7 +13,7 @@ var next_timestamp_index: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.play("default")
+	sprite.play("run")
 	
 func reset():
 	time = 0.0

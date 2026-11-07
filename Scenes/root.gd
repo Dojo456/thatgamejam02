@@ -33,7 +33,8 @@ var lead_initial: Vector2
 
 # Some offset variables to have more precise manual control of timing
 ## timing_offset controls the number of pixels the map is offset
-@export var timing_offset: int = 96
+@export var timing_offset: int = 48
+@export var input_timing_offset: int = 48
 ## lead_character_offset controls the number of pixels the lead character is offset.
 ## It also is calculated into time by dividing by map_speed
 @export var lead_character_offset: int = 32
@@ -113,9 +114,18 @@ func _process(delta: float) -> void:
 	# The HUD moves the input timestamp list internally. Potentially a refactor is 
 	# to move map position logic to be internal within MapHolder as well
 	hud.time = time
-	hud.timing_offset = timing_offset
+	hud.timing_offset = input_timing_offset
+	
+	map_viewer.time = time
+	map_viewer.timing_offset = timing_offset
+	
 	lead_char.time = time + ((lead_initial.x  + lead_character_offset - player_initial.x) / map_speed)
-	map.position.x = player_initial.x + timing_offset - (map_speed * time)
+	
+	# Propagate down speed and other values
+	map_viewer.speed = map_speed
+	hud.speed = map_speed
+	hud.score = score
+	
 	# Set Hud input indicator based on timing
 	var within_timing = false
 	
@@ -130,11 +140,6 @@ func _process(delta: float) -> void:
 				hud_input_indicator_color = hud_color_timings[timing]
 				
 	hud.input_indicator_color = hud_input_indicator_color
-	
-	# Propagate down speed and other values
-	map_viewer.speed = map_speed
-	hud.speed = map_speed
-	hud.score = score
 	
 	# Set any audio effects, for now there are none
 	var bus_idx = AudioServer.get_bus_index("Master")
