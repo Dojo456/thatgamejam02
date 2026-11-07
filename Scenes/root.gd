@@ -86,9 +86,9 @@ var hud_color_timings: Dictionary[float, Color] = {
 	-0.3: Color.RED,
 	-0.2: Color.YELLOW,
 	-0.1: Color.GREEN,
-	0.1: Color.GREEN,
-	0.2: Color.RED,
-	0.3: Color.DARK_GRAY,
+	0.05: Color.GREEN,
+	0.1: Color.RED,
+	0.15: Color.DARK_GRAY,
 }
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -109,6 +109,7 @@ func _process(delta: float) -> void:
 	# The HUD moves the input timestamp list internally. Potentially a refactor is 
 	# to move map position logic to be internal within MapHolder as well
 	hud.time = time
+	hud.timing_offset = timing_offset
 	lead_char.time = time + ((lead_initial.x  + lead_character_offset - player_initial.x) / map_speed)
 	map.position.x = player_initial.x + timing_offset - (map_speed * time)
 	# Set Hud input indicator based on timing
@@ -155,9 +156,9 @@ var score_timings = {
 	-0.3: 5,
 	-0.2: 10,
 	-0.1: 20,
-	0.1: 20,
-	0.2: 5,
-	0.3: 0
+	0.05: 20,
+	0.1: 5,
+	0.15: 0
 }
 
 func _input(event: InputEvent) -> void:

@@ -23,6 +23,12 @@ func _input(event):
 			_unpause_game()
 		else:
 			_pause_game()
+	elif event.is_action_pressed("toggle-fullscreen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+			#DisplayServer.window_start_resize()
+		elif DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	
 func _start_game():
 	ui.hide()
@@ -34,14 +40,16 @@ func _start_game():
 	
 func _pause_game():
 	ui.show()
-	game.hide()
 	get_tree().paused = true
 	
 func _unpause_game():
 	ui.hide()
-	game.show()
 	get_tree().paused = false
 
 
 func _on_start_button_pressed() -> void:
 	_start_game()
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
