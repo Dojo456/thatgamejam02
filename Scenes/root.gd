@@ -114,8 +114,17 @@ func _process(delta: float) -> void:
 	# to move map position logic to be internal within MapHolder as well
 	hud.time = time
 	hud.timing_offset = timing_offset
+	
+	map_viewer.time = time
+	map_viewer.timing_offset = timing_offset
+	
 	lead_char.time = time + ((lead_initial.x  + lead_character_offset - player_initial.x) / map_speed)
-	map.position.x = player_initial.x + timing_offset - (map_speed * time)
+	
+	# Propagate down speed and other values
+	map_viewer.speed = map_speed
+	hud.speed = map_speed
+	hud.score = score
+	
 	# Set Hud input indicator based on timing
 	var within_timing = false
 	
@@ -130,11 +139,6 @@ func _process(delta: float) -> void:
 				hud_input_indicator_color = hud_color_timings[timing]
 				
 	hud.input_indicator_color = hud_input_indicator_color
-	
-	# Propagate down speed and other values
-	map_viewer.speed = map_speed
-	hud.speed = map_speed
-	hud.score = score
 	
 	# Set any audio effects, for now there are none
 	var bus_idx = AudioServer.get_bus_index("Master")
