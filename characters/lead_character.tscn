@@ -202,7 +202,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"duck",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -231,7 +231,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"fallback",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -260,7 +260,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"forward",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -289,7 +289,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"jump",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -318,7 +318,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ksp0"]
@@ -336,7 +336,7 @@ reset_time = 0.2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=931392161]
 sprite_frames = SubResource("SpriteFrames_4ksp0")
-animation = &"run"
+animation = &"duck"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCharacter" unique_id=1263223555]
 shape = SubResource("RectangleShape2D_4ksp0")
