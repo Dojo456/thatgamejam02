@@ -2,6 +2,8 @@
 class_name InputIndicator
 extends Control
 
+@export var debug = true
+
 @export var input: InputTimestamp
 
 @onready var label: Label = $Label
@@ -13,7 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	time_label.visible = debug
 
 func _rebuild_display():	
 	var binds = {
