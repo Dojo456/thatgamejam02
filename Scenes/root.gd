@@ -33,7 +33,8 @@ var lead_initial: Vector2
 
 # Some offset variables to have more precise manual control of timing
 ## timing_offset controls the number of pixels the map is offset
-@export var timing_offset: int = 96
+@export var timing_offset: int = 48
+@export var input_timing_offset: int = 48
 ## lead_character_offset controls the number of pixels the lead character is offset.
 ## It also is calculated into time by dividing by map_speed
 @export var lead_character_offset: int = 32
@@ -113,7 +114,7 @@ func _process(delta: float) -> void:
 	# The HUD moves the input timestamp list internally. Potentially a refactor is 
 	# to move map position logic to be internal within MapHolder as well
 	hud.time = time
-	hud.timing_offset = timing_offset
+	hud.timing_offset = input_timing_offset
 	
 	map_viewer.time = time
 	map_viewer.timing_offset = timing_offset

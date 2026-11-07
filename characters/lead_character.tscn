@@ -336,7 +336,8 @@ reset_time = 0.2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=931392161]
 sprite_frames = SubResource("SpriteFrames_4ksp0")
-animation = &"duck"
+animation = &"run"
+frame_progress = 0.1808523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCharacter" unique_id=1263223555]
 shape = SubResource("RectangleShape2D_4ksp0")

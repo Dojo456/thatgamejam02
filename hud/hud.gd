@@ -18,7 +18,8 @@ extends Control
 @export var timing_offset: int = 0
 @export var time: float
 @export var input_indicator_scene: PackedScene
-var input_offset = 0
+
+var input_offset: int = 0
 
 # Input indicator controls
 @export var input_indicator_color: Color = Color.DARK_GRAY:

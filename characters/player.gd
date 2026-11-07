@@ -9,7 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.play("default")
+	sprite.play("run")
 	
 func reset():
 	base_char.current_action = BaseCharacter.Action.NONE
