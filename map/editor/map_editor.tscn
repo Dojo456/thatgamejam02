@@ -24,7 +24,7 @@ stream_paused = true
 [node name="EditorElements" type="Node2D" parent="." unique_id=649489225]
 
 [node name="TrackTimeline" type="Line2D" parent="EditorElements" unique_id=998109580]
-points = PackedVector2Array(0, 384, 22297.393, 384)
+points = PackedVector2Array(0, 384, 63256.125, 384)
 
 [node name="Timestamps" type="Node2D" parent="EditorElements" unique_id=11855529]
 

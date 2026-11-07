@@ -6,6 +6,9 @@ extends Node2D
 
 ## Speed in pixels per second
 @export var speed: int = 64
+@export var time: float = 0.0 
+@export var timing_offset: int = 0
+
 
 ## The selected TrackInfo resource to be viewed
 @export var track_info: TrackInfo
@@ -20,6 +23,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		_rebuild_map()
+		
+	obstacles.position.x = (speed * -time) + timing_offset
+
 		
 func _rebuild_map():
 	if not track_info or not track_info.file or track_info.inputs_list.size() < 1:
