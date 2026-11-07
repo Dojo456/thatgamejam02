@@ -77,7 +77,7 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="ScoreAddSpawnpoint" type="Marker2D" parent="." unique_id=755642361]
-position = Vector2(43, 67)
+position = Vector2(57, 285)
 
 [node name="Debug" type="Control" parent="." unique_id=1211240491]
 anchors_preset = 0
@@ -98,4 +98,4 @@ offset_left = 566.0
 offset_top = 6.0
 offset_right = 635.0
 offset_bottom = 29.0
-text = "25.00 fps"
+text = "60.00 fps"
