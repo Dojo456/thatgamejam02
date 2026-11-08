@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bi81dxop40lp6"]
 
 [ext_resource type="Script" uid="uid://qeot0ixomuwa" path="res://Scenes/main.gd" id="1_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bvxnwcovcmkg4" path="res://resources/titlescreen_withtext.png" id="2_bo1nx"]
 
 [node name="Main" type="Node" unique_id=1538488192]
 process_mode = 3
@@ -31,6 +32,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TitlescreenWithtext" type="Sprite2D" parent="UI" unique_id=1085915267]
+position = Vector2(448, 233)
+texture = ExtResource("2_bo1nx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1320784529]
 layout_mode = 1
