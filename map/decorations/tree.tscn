@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cpu4yq5e47khj"]
+
+[ext_resource type="Script" uid="uid://c37kgtct80qar" path="res://map/decorations/tree.gd" id="1_myy81"]
+[ext_resource type="Texture2D" uid="uid://bvfsgqdvfh7yj" path="res://Obstacles/tree_evergreen.png" id="1_tra8p"]
+[ext_resource type="Texture2D" uid="uid://jjxphquag1kv" path="res://Obstacles/treebody.png" id="2_imvwh"]
+[ext_resource type="Material" uid="uid://o40g6de26ywn" path="res://map/decorations/tree_sway_material.tres" id="2_myy81"]
+[ext_resource type="Texture2D" uid="uid://bfoa5askuv26y" path="res://Obstacles/treetop1.png" id="2_vcy7i"]
+[ext_resource type="Texture2D" uid="uid://cj20slgrpglvp" path="res://Obstacles/treebody_2.png" id="3_imvwh"]
+
+[node name="Tree" type="Node2D" unique_id=1202710095]
+y_sort_enabled = true
+script = ExtResource("1_myy81")
+
+[node name="One" type="Node2D" parent="." unique_id=841282781]
+
+[node name="Sprite2D2" type="Sprite2D" parent="One" unique_id=854992775]
+position = Vector2(3, 20)
+texture = ExtResource("2_imvwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="One" unique_id=1120308907]
+material = ExtResource("2_myy81")
+texture = ExtResource("2_vcy7i")
+
+[node name="Two" type="Node2D" parent="." unique_id=1865141970]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Two" unique_id=324108287]
+position = Vector2(1, 12)
+texture = ExtResource("3_imvwh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Two" unique_id=1905990164]
+material = ExtResource("2_myy81")
+texture = ExtResource("1_tra8p")

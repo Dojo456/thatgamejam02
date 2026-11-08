@@ -17,7 +17,12 @@ var current_action: Action = Action.NONE
 ## 'initial_pos' is the default position the character will reset to
 var initial_pos: Vector2
 ## Controls how tall the jump is in terms of pixels
-@export var jump_height = Vector2(0, 128)
+@export var jump_heights: Dictionary[Action, Vector2] = {
+	Action.UP: Vector2(0, 64),
+	Action.DOWN: Vector2(0, -32),
+	Action.LEFT: Vector2(64, -12),
+	Action.RIGHT: Vector2(-64, -12),
+}
 
 ## How long it takes to move from default position to peak of jump position
 @export var jump_time = 0.2
@@ -46,13 +51,9 @@ func reset_in(time: float):
 		
 func perform_action(action: Action):
 	match action:
-		Action.UP:
-			current_action = Action.UP
-			velocity.y = -jump_height.y / jump_time
-			reset_in(jump_time)
-		Action.DOWN:
-			current_action = Action.DOWN
-			velocity.y = jump_height.y / jump_time
+		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT:
+			current_action = action
+			velocity = jump_heights[action] / jump_time
 			reset_in(jump_time)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -60,10 +61,8 @@ func _physics_process(delta: float) -> void:
 	match current_action:
 		Action.NONE:
 			velocity = Vector2.ZERO
-		Action.UP:
-			global_position = global_position.move_toward(initial_pos - jump_height, abs(velocity.y * delta))
-		Action.DOWN:
-			global_position = global_position.move_toward(initial_pos + jump_height, abs(velocity.y * delta))
+		Action.UP, Action.DOWN, Action.LEFT, Action.RIGHT:
+			global_position = global_position.move_toward(initial_pos - jump_heights[current_action], abs(velocity.length() * delta))
 		Action.RESET:
 			global_position = global_position.move_toward(initial_pos, velocity.length() * delta)
 			

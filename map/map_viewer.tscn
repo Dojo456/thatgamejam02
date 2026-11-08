@@ -1,22 +1,75 @@
 [gd_scene format=3 uid="uid://crljty6g7l4vq"]
 
 [ext_resource type="Script" uid="uid://bbh5y565pyphl" path="res://map/map_viewer.gd" id="1_ehkm7"]
-[ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_n5qe1"]
+[ext_resource type="Resource" uid="uid://dmsxg0m6j2djv" path="res://resources/song_1.tres" id="2_wk10c"]
 [ext_resource type="PackedScene" uid="uid://3mjduyqvkc7o" path="res://map/obstacle/up_obstacle.tscn" id="3_eomka"]
 [ext_resource type="PackedScene" uid="uid://csbstweo6860b" path="res://map/obstacle/down_obstacle.tscn" id="4_6u36b"]
 [ext_resource type="PackedScene" uid="uid://clicop4hf78lo" path="res://map/obstacle/right_obstacle.tscn" id="5_wk10c"]
 [ext_resource type="PackedScene" uid="uid://dundk5crxayct" path="res://map/obstacle/left_obstacle.tscn" id="6_6u36b"]
+[ext_resource type="Shader" uid="uid://dy8aku8l81occ" path="res://map/background.gdshader" id="7_2tqy4"]
+[ext_resource type="Texture2D" uid="uid://nqberu5ywxe6" path="res://Obstacles/grass forest.png" id="7_wk10c"]
+[ext_resource type="Texture2D" uid="uid://xmdtblnt1ing" path="res://Obstacles/bushborder.png" id="9_k1rpv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2tqy4"]
+shader = ExtResource("7_2tqy4")
 
 [node name="MapViewer" type="Node2D" unique_id=1442470313]
 script = ExtResource("1_ehkm7")
-track_info = ExtResource("2_n5qe1")
+show_static = true
+track_info = ExtResource("2_wk10c")
 obstacle_bindings = Dictionary[int, PackedScene]({
 0: ExtResource("3_eomka"),
 1: ExtResource("4_6u36b"),
 2: ExtResource("6_6u36b"),
 3: ExtResource("5_wk10c")
 })
+tree_density = 1.5
 
-[node name="Obstacles" type="Node2D" parent="." unique_id=688571345]
+[node name="Holder" type="Node2D" parent="." unique_id=31762584]
 
-[node name="Static" type="Node2D" parent="." unique_id=1538224593]
+[node name="Statics" type="Node2D" parent="Holder" unique_id=1538224593]
+
+[node name="Background" type="Sprite2D" parent="Holder/Statics" unique_id=1478800860]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_2tqy4")
+texture = ExtResource("7_wk10c")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 6087.2505, 360)
+
+[node name="TopBush" type="Sprite2D" parent="Holder/Statics" unique_id=804297178]
+texture_repeat = 2
+texture = ExtResource("9_k1rpv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3043.6252, 32)
+
+[node name="BottomBush" type="Sprite2D" parent="Holder/Statics" unique_id=1259374139]
+texture_repeat = 2
+position = Vector2(0, 327)
+texture = ExtResource("9_k1rpv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3043.6252, 32)
+
+[node name="TopTreeRegion" type="ReferenceRect" parent="Holder/Statics" unique_id=1227976737]
+offset_top = 41.0
+offset_right = 6087.2505
+offset_bottom = 99.0
+
+[node name="TopTreeHolder" type="Node2D" parent="Holder/Statics" unique_id=1509571583]
+y_sort_enabled = true
+position = Vector2(0, 41)
+
+[node name="BottomTreeHolder" type="Node2D" parent="Holder/Statics" unique_id=1112573601]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 210)
+
+[node name="BottomTreeRegion" type="ReferenceRect" parent="Holder/Statics" unique_id=718134388]
+offset_top = 210.0
+offset_right = 6087.2505
+offset_bottom = 297.0
+
+[node name="Obstacles" type="Node2D" parent="Holder" unique_id=688571345]
+y_sort_enabled = true

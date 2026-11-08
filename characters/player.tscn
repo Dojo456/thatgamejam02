@@ -385,8 +385,8 @@ animations = [{
 script = ExtResource("1_3eadt")
 
 [node name="BaseCharacter" parent="." unique_id=838381177 instance=ExtResource("1_dnjla")]
-jump_time = 0.15
-reset_time = 0.15
+jump_time = 0.2
+reset_time = 0.25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseCharacter" unique_id=310571741]
 shape = SubResource("RectangleShape2D_4ksp0")
@@ -394,3 +394,4 @@ shape = SubResource("RectangleShape2D_4ksp0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=311320082]
 sprite_frames = SubResource("SpriteFrames_3eadt")
 animation = &"run"
+frame_progress = 0.89075804

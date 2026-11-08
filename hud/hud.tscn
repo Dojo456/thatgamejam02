@@ -3,13 +3,9 @@
 [ext_resource type="Script" uid="uid://dl2wtv56ucefs" path="res://hud/hud.gd" id="1_6ca3a"]
 [ext_resource type="Resource" uid="uid://b6fwyx5d36tnf" path="res://resources/shinigami_eyes_track.tres" id="2_2gk58"]
 [ext_resource type="PackedScene" uid="uid://ceymhuijr501f" path="res://hud/input_indicator.tscn" id="3_318vg"]
+[ext_resource type="Texture2D" uid="uid://tnl7k87epo0o" path="res://resources/ui-crosshair.png" id="4_w8tcp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_318vg"]
-bg_color = Color(0, 0.7589051, 0.74898744, 1)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 24
-corner_radius_bottom_left = 24
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3pel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8tcp"]
 bg_color = Color(0.8175212, 0.81752133, 0.8175211, 1)
@@ -27,7 +23,6 @@ corner_radius_bottom_left = 4
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_6ca3a")
-debug = null
 track_info = ExtResource("2_2gk58")
 input_indicator_scene = ExtResource("3_318vg")
 
@@ -58,8 +53,9 @@ offset_top = -20.0
 offset_right = 60.0
 offset_bottom = 20.0
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_318vg")
-text = "X"
+theme_override_constants/icon_max_width = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j3pel")
+icon = ExtResource("4_w8tcp")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1846699579]
 layout_mode = 0
@@ -81,7 +77,6 @@ horizontal_alignment = 1
 position = Vector2(57, 285)
 
 [node name="Debug" type="Control" parent="." unique_id=1211240491]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -100,4 +95,4 @@ offset_left = 566.0
 offset_top = 6.0
 offset_right = 635.0
 offset_bottom = 29.0
-text = "31.00 fps"
+text = "47.00 fps"

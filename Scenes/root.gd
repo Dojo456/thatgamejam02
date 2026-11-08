@@ -12,8 +12,7 @@ extends Node2D
 
 @export var debug: bool = true
 
-@onready var map = $MapHolder
-@onready var map_viewer: MapViewer = $MapHolder/MapViewer
+@onready var map_viewer: MapViewer = $MapViewer
 
 # Characters
 @onready var lead_char: LeadCharacter = $LeadCharacter
@@ -52,7 +51,7 @@ var next_timestamp_index: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	map_initial = map.position
+	map_initial = map_viewer.position
 	player_initial = player.position
 	lead_initial = lead_char.position
 	
@@ -111,8 +110,7 @@ func _process(delta: float) -> void:
 			next_timestamp_index += 1
 			
 	# Propagate down time, and then move the map based on time
-	# The HUD moves the input timestamp list internally. Potentially a refactor is 
-	# to move map position logic to be internal within MapHolder as well
+	# The HUD moves the input timestamp list internally.
 	hud.time = time
 	hud.timing_offset = input_timing_offset
 	
@@ -201,3 +199,5 @@ func _input(event: InputEvent) -> void:
 				combo += combo_add
 				if hit:
 					next_timestamp_index += 1
+				else:
+					player

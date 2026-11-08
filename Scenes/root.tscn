@@ -11,31 +11,34 @@
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")
 debug = false
-start_time = 0.0
-timing_offset = 185
-lead_character_offset = -110
+map_speed = 200
+time = 38.23
+start_time = -2.0
+timing_offset = 80
+input_timing_offset = 50
+lead_character_offset = -10
 track_info = ExtResource("2_r3lo5")
+
+[node name="MapViewer" parent="." unique_id=1442470313 instance=ExtResource("4_l8v81")]
+speed = 200
+time = 38.23
+timing_offset = 80
 
 [node name="LeadCharacter" parent="." unique_id=35823728 instance=ExtResource("3_vyht1")]
 position = Vector2(320, 160)
 track_info = ExtResource("2_r3lo5")
-time = 0.4866666666666667
+time = 39.459999999999994
 
 [node name="Player" parent="." unique_id=485475503 instance=ExtResource("3_l8v81")]
 position = Vector2(64, 160)
 
-[node name="MapHolder" type="Node2D" parent="." unique_id=134841757]
-
-[node name="MapViewer" parent="MapHolder" unique_id=1442470313 instance=ExtResource("4_l8v81")]
-speed = 300
-timing_offset = 185
-track_info = ExtResource("2_r3lo5")
-
 [node name="Hud" parent="." unique_id=319789091 instance=ExtResource("4_28aoi")]
+z_index = 2
 debug = false
 track_info = ExtResource("2_r3lo5")
-speed = 300
-timing_offset = 48
+speed = 200
+timing_offset = 50
+time = 38.23
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2079884935]
 stream = ExtResource("7_dun2r")

@@ -5,7 +5,6 @@
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=838381177]
 motion_mode = 1
 script = ExtResource("1_pjt0s")
-jump_height = Vector2(0, 64)
 jump_time = 0.1
 
 [node name="Timer" type="Timer" parent="." unique_id=888027317]

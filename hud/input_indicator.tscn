@@ -26,6 +26,7 @@ offset_right = 40.0
 offset_bottom = 20.0
 grow_vertical = 2
 script = ExtResource("1_ea5fo")
+debug = false
 input = SubResource("Resource_ea5fo")
 
 [node name="Label" type="Label" parent="." unique_id=919359806]
@@ -41,6 +42,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TimeLabel" type="Label" parent="." unique_id=1334338076]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.125

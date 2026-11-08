@@ -1,15 +1,21 @@
 extends Node2D
 
-@onready var purple = $Purple
-@onready var default = $Default
+@onready var options = [
+	$One,
+	$Two,
+	$Three
+]
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if randf() < 0.5:
-		purple.hide()
-	else:
-		default.hide()
+	var chosen = randi_range(0, options.size() - 1)
+	
+	for i in range(options.size()):
+		if i != chosen:
+			options[i].hide()
+			
+	options[chosen].show()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
