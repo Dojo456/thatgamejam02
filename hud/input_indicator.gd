@@ -2,7 +2,13 @@
 class_name InputIndicator
 extends Control
 
-@export var debug = true
+@export var debug = true:
+	set(val):
+		if val != debug:
+			if time_label:
+				time_label.visible = val
+			
+			debug = val
 
 @export var input: InputTimestamp
 
@@ -15,7 +21,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	time_label.visible = debug
+	pass
 
 func _rebuild_display():	
 	var binds = {

@@ -10,7 +10,7 @@
 class_name Root
 extends Node2D
 
-@export var debug = true
+@export var debug: bool = true
 
 @onready var map = $MapHolder
 @onready var map_viewer: MapViewer = $MapHolder/MapViewer

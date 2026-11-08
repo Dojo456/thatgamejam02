@@ -393,4 +393,5 @@ shape = SubResource("RectangleShape2D_4ksp0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BaseCharacter" unique_id=311320082]
 sprite_frames = SubResource("SpriteFrames_3eadt")
-animation = &"duck"
+animation = &"run"
+frame_progress = 0.16441841
