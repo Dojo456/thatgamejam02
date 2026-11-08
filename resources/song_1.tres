@@ -1,0 +1,188 @@
+[gd_resource type="Resource" script_class="TrackInfo" format=3 uid="uid://dmsxg0m6j2djv"]
+
+[ext_resource type="AudioStream" uid="uid://bnk00iamb058r" path="res://resources/sng1.draf.wav" id="1_k8yjw"]
+[ext_resource type="Script" uid="uid://d2nh3pw2v5wmi" path="res://map/track_info/input_timestamp.gd" id="2_rrfqs"]
+[ext_resource type="Script" uid="uid://b51ujcbx2nys3" path="res://map/track_info/track_info.gd" id="3_ouhaq"]
+
+[sub_resource type="Resource" id="Resource_rrfqs"]
+resource_name = "15.00 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 15.0
+
+[sub_resource type="Resource" id="Resource_ouhaq"]
+resource_name = "18.15 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 18.15
+input = 1
+
+[sub_resource type="Resource" id="Resource_51ip7"]
+resource_name = "21.39 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 21.385
+
+[sub_resource type="Resource" id="Resource_ga30w"]
+resource_name = "24.57 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 24.565
+input = 1
+
+[sub_resource type="Resource" id="Resource_dxj44"]
+resource_name = "27.70 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 27.7
+
+[sub_resource type="Resource" id="Resource_k8yjw"]
+resource_name = "30.94 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 30.94
+input = 1
+
+[sub_resource type="Resource" id="Resource_6xl1a"]
+resource_name = "34.12 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 34.115
+input = 3
+
+[sub_resource type="Resource" id="Resource_fncyl"]
+resource_name = "37.37 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 37.365
+input = 2
+
+[sub_resource type="Resource" id="Resource_1duhu"]
+resource_name = "40.55 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 40.55
+input = 3
+
+[sub_resource type="Resource" id="Resource_x1w4p"]
+resource_name = "43.73 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 43.725
+input = 2
+
+[sub_resource type="Resource" id="Resource_spkdo"]
+resource_name = "46.91 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 46.91
+input = 2
+
+[sub_resource type="Resource" id="Resource_mol0x"]
+resource_name = "50.07 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 50.07
+input = 3
+
+[sub_resource type="Resource" id="Resource_2xgr4"]
+resource_name = "56.52 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 56.52
+
+[sub_resource type="Resource" id="Resource_rpbxd"]
+resource_name = "59.70 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 59.7
+input = 1
+
+[sub_resource type="Resource" id="Resource_04lhn"]
+resource_name = "62.92 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 62.92
+
+[sub_resource type="Resource" id="Resource_55pfo"]
+resource_name = "67.72 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 67.72
+input = 1
+
+[sub_resource type="Resource" id="Resource_t8dbl"]
+resource_name = "69.39 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 69.385
+input = 1
+
+[sub_resource type="Resource" id="Resource_cruqn"]
+resource_name = "70.99 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 70.99
+input = 1
+
+[sub_resource type="Resource" id="Resource_3us4d"]
+resource_name = "72.56 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 72.555
+
+[sub_resource type="Resource" id="Resource_sw2lm"]
+resource_name = "74.17 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 74.175
+
+[sub_resource type="Resource" id="Resource_r2m4d"]
+resource_name = "75.78 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 75.78
+input = 2
+
+[sub_resource type="Resource" id="Resource_utlgv"]
+resource_name = "77.46 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 77.46
+input = 3
+
+[sub_resource type="Resource" id="Resource_c1phj"]
+resource_name = "78.97 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 78.97
+input = 3
+
+[sub_resource type="Resource" id="Resource_34bix"]
+resource_name = "80.58 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 80.575
+input = 2
+
+[sub_resource type="Resource" id="Resource_a518f"]
+resource_name = "82.22 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 82.225
+
+[sub_resource type="Resource" id="Resource_2y5bn"]
+resource_name = "83.85 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 83.85
+input = 1
+
+[sub_resource type="Resource" id="Resource_wwb5n"]
+resource_name = "85.33 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 85.33
+
+[sub_resource type="Resource" id="Resource_frjwx"]
+resource_name = "87.00 - LEFT"
+script = ExtResource("2_rrfqs")
+timestamp = 87.005
+input = 2
+
+[sub_resource type="Resource" id="Resource_0ieuq"]
+resource_name = "88.74 - DOWN"
+script = ExtResource("2_rrfqs")
+timestamp = 88.74
+input = 1
+
+[sub_resource type="Resource" id="Resource_o31yx"]
+resource_name = "90.37 - RIGHT"
+script = ExtResource("2_rrfqs")
+timestamp = 90.37
+input = 3
+
+[sub_resource type="Resource" id="Resource_e8oa4"]
+resource_name = "93.36 - UP"
+script = ExtResource("2_rrfqs")
+timestamp = 93.355
+
+[resource]
+script = ExtResource("3_ouhaq")
+name = "Song 1"
+file = ExtResource("1_k8yjw")
+inputs_list = Array[ExtResource("2_rrfqs")]([SubResource("Resource_rrfqs"), SubResource("Resource_ouhaq"), SubResource("Resource_51ip7"), SubResource("Resource_ga30w"), SubResource("Resource_dxj44"), SubResource("Resource_k8yjw"), SubResource("Resource_6xl1a"), SubResource("Resource_fncyl"), SubResource("Resource_1duhu"), SubResource("Resource_x1w4p"), SubResource("Resource_spkdo"), SubResource("Resource_mol0x"), SubResource("Resource_2xgr4"), SubResource("Resource_rpbxd"), SubResource("Resource_04lhn"), SubResource("Resource_55pfo"), SubResource("Resource_t8dbl"), SubResource("Resource_cruqn"), SubResource("Resource_3us4d"), SubResource("Resource_sw2lm"), SubResource("Resource_r2m4d"), SubResource("Resource_utlgv"), SubResource("Resource_c1phj"), SubResource("Resource_34bix"), SubResource("Resource_a518f"), SubResource("Resource_2y5bn"), SubResource("Resource_wwb5n"), SubResource("Resource_frjwx"), SubResource("Resource_0ieuq"), SubResource("Resource_o31yx"), SubResource("Resource_e8oa4")])
+metadata/_custom_type_script = "uid://b51ujcbx2nys3"

@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://bhmgjk2md1u74"]
 
 [ext_resource type="Script" uid="uid://cnh6u68t8u754" path="res://Scenes/root.gd" id="1_vvh5c"]
-[ext_resource type="Resource" uid="uid://u6mlunrubwt1" path="res://resources/11_2_draft.tres" id="2_l8v81"]
+[ext_resource type="Resource" uid="uid://dmsxg0m6j2djv" path="res://resources/song_1.tres" id="2_r3lo5"]
 [ext_resource type="PackedScene" uid="uid://c62isflgu367" path="res://characters/player.tscn" id="3_l8v81"]
 [ext_resource type="PackedScene" uid="uid://b62wuo03h4v8k" path="res://characters/lead_character.tscn" id="3_vyht1"]
 [ext_resource type="PackedScene" uid="uid://d1axd41dswpbc" path="res://hud/hud.tscn" id="4_28aoi"]
 [ext_resource type="PackedScene" uid="uid://crljty6g7l4vq" path="res://map/map_viewer.tscn" id="4_l8v81"]
-[ext_resource type="AudioStream" uid="uid://l0sf73joe2o3" path="res://resources/Shinigami Eyes.mp3" id="6_l8v81"]
+[ext_resource type="AudioStream" uid="uid://bnk00iamb058r" path="res://resources/sng1.draf.wav" id="7_dun2r"]
 
 [node name="Root" type="Node2D" unique_id=1242185066]
 script = ExtResource("1_vvh5c")
-timing_offset = 45
-input_timing_offset = -35
-lead_character_offset = -20
-track_info = ExtResource("2_l8v81")
+debug = false
+start_time = 0.0
+timing_offset = 185
+lead_character_offset = -110
+track_info = ExtResource("2_r3lo5")
 
 [node name="LeadCharacter" parent="." unique_id=35823728 instance=ExtResource("3_vyht1")]
 position = Vector2(320, 160)
-time = 0.7866666666666666
+track_info = ExtResource("2_r3lo5")
+time = 0.4866666666666667
 
 [node name="Player" parent="." unique_id=485475503 instance=ExtResource("3_l8v81")]
 position = Vector2(64, 160)
@@ -26,13 +28,14 @@ position = Vector2(64, 160)
 
 [node name="MapViewer" parent="MapHolder" unique_id=1442470313 instance=ExtResource("4_l8v81")]
 speed = 300
-timing_offset = 45
-track_info = ExtResource("2_l8v81")
+timing_offset = 185
+track_info = ExtResource("2_r3lo5")
 
 [node name="Hud" parent="." unique_id=319789091 instance=ExtResource("4_28aoi")]
-track_info = ExtResource("2_l8v81")
+debug = false
+track_info = ExtResource("2_r3lo5")
 speed = 300
-timing_offset = -35
+timing_offset = 48
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2079884935]
-stream = ExtResource("6_l8v81")
+stream = ExtResource("7_dun2r")

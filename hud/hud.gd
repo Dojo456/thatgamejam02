@@ -2,7 +2,7 @@
 class_name Hud
 extends Control
 
-@export var debug = true
+@export var debug: bool = true
 
 @onready var input_bar = $Panel
 @onready var input_indicator = $Panel/Button
